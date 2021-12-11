@@ -1,0 +1,7 @@
+{
+  "name": "alvaro-cv",
+  "version": "1.0.0",
+  "scripts": {
+    "deploy": "aws s3 sync ./dist s3://cv.alvaro.separovi.ch --acl=public-read && aws cloudfront create-invalidation --distribution-id E1G1J9QIJQJK7R --paths '/*'"
+  }
+}
